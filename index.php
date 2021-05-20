@@ -11,10 +11,6 @@
         <fieldset>
         <legend>Formulaire</legend>
         <div>
-            <label for="date">Date</label>
-            <input type="date" id='date' name='day_date'>
-        </div>
-        <div>
             <label for="name">Nom</label>
             <input type="text" id='name' name='user_name'>
         </div>
@@ -25,6 +21,10 @@
         <div>
             <label for="password">Mot de passe</label>
             <input type="password" id='password' name='user_password'>
+        </div>
+        <div>
+            <label for="date">Date de naissance</label>
+            <input type="date" id='date' name='user_birthdate'>
         </div>
         <div>
             <label for="msg">Message</label>
