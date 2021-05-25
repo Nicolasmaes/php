@@ -3,7 +3,7 @@ if(isset($_POST['user_mail'])&& !empty($_POST['user_mail'])){
     $email = $_POST['user_mail'];
     $objet = $_POST['message_topic'];
     $message = $_POST['user_message'];
-    $recipient = 'n.maes@codeur.online';
+    $recipient = 'contact@nicolasmaes.fr';
     $send = 'message envoyé par '.$email.' : '.$message;
     $headerFields = array(
       "From: {$email}",
