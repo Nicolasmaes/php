@@ -14,11 +14,11 @@
                     <input id="user_name" name="user_name"></input>
                 </div>
                 <div>
-                    <label for="user_mail">Your e-mail</label>
+                    <label for="user_mail">E-mail</label>
                     <input type="user_mail" id='input_mail' name='user_mail'>
                 </div>
                 <div>
-                    <label for="user_password">Your password</label>
+                    <label for="user_password">Password</label>
                     <input type="password" id='user_password' name='user_password'>
                 </div>
                 <div>

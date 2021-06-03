@@ -1,6 +1,8 @@
 <?php
     session_start();
-    echo $_SESSION['success'];
+    if ($_SESSION['user_name']) {
+        echo $_SESSION['success'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -12,11 +14,6 @@
         <title>Document</title>
     </head>
     <body>
-        <a href="test.php">TEST À LA PAGE TEST</a>
-        <h1>
-            <?php
-                echo 'bonjour '.$_SESSION['user_name'].' ! ';
-            ?>
-        </h1>
+        <a href="add-form.php">Add a project</a>
     </body>
 </html>
