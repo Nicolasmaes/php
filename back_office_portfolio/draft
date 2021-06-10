@@ -10,3 +10,5 @@ project_specs
 project_prototype	
 project_link_website	
 project_link_github
+
+$_POST est une super globale
