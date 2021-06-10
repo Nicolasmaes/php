@@ -17,9 +17,9 @@
                 <input type="password" id="password" name="userpassword">
             </div>
             <div>
-                <a href="index.php"><button>Back</button></a>
                 <input type="submit" value="Log in">
             </div>
         </form>
+        <a href="index.php"><button>Back</button></a>
     </body>
 </html>
