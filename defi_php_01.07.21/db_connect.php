@@ -1,6 +1,6 @@
 <?php
 $servername = 'localhost';
-$dbname = 'back_office';
+$dbname = 'forum';
 $username = 'root';
 $password = '';
 try {

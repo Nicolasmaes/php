@@ -1,15 +1,11 @@
 <?php
-session_start();
-
-if ($_SESSION['user_name']) {
     echo $_SESSION['success'];
 
     require_once('db_connect.php');
-    $sql='SELECT * FROM `test`';
+    $sql='SELECT * FROM `article`';
     $query=$db->prepare($sql);
     $query->execute();
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
-    }
 ?>
 
 <!DOCTYPE html>
@@ -23,12 +19,12 @@ if ($_SESSION['user_name']) {
     </head>
     <body>
         <?php 
-        foreach ($result as $project) {
+        foreach ($result as $article) {
         ?>
-        <a href="project-details.php?id=<?=$project['project_id']?>"><?=$project['picture']?></a>
+        <a href="project-details.php?id=<?=$article['id']?>"><?=$article['object']?></a>
         <?php
         }
         ?>
-        <a href="add-form.php">Add a project</a>
+        <a href="index.php">Add an article</a>
     </body>
 </html>

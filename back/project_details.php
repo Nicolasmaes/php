@@ -1,21 +1,16 @@
 <?php
 session_start();
-
-if ($_SESSION['user_name']) {
     if (isset($_GET['id']) && !empty($_GET['id'])) {
         require_once('db_connect.php');
         $id = strip_tags($_GET['id']);
-        $sql = 'SELECT * FROM `projects` WHERE `project_id`=:id';
+        $sql = 'SELECT * FROM `article` WHERE `id`=:id';
         $query = $db->prepare($sql);
         $query->bindValue(':id', $id, PDO::PARAM_STR);
         $query->execute();
         $result = $query->fetch();
     } else {
-        echo 'missing username';
+        echo 'missing id';
     }
-} else {
-    echo 'Please log in.';
-}
 ?>
 
 <!DOCTYPE html>
@@ -24,15 +19,16 @@ if ($_SESSION['user_name']) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project details</title>
+    <title>Article details</title>
 </head>
 <body>
-    <?= $result['project_title'] ?>
-    <?= $result['project_context'] ?>
-    <?= $result['project_specs'] ?>
+
+    <h1><?= $result['author'] ?></h1>
+    <h2><?= $result['object'] ?></h2>
+    <p><?= $result['text'] ?></p>
+
     <a href="home.php"><button>Back</button></a>
-    <a href="project-delete.php?id=<?= $result['project_id'] ?>"><button>Delete <?= $result['project_title'] ?></button></a>
-    <a href="project-edit.php?id=<?= $result['project_id'] ?>"><button>Edit <?= $result['project_title'] ?></button></a>
     
 </body>
 </html>
+

@@ -1,0 +1,18 @@
+table{
+    border:1px solid black;
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}
+th{
+    border:1px solid black;
+}
+td{
+    border:1px solid black;
+}
+a{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}

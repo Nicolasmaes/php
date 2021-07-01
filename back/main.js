@@ -1,12 +1,11 @@
-document.getElementById('submit').addEventListener('click', (event)=>{
-let password = document.getElementById('input_password').value;
-let confirmation = document.getElementById('input_confirmation').value;
-console.log(password);
-console.log(confirmation);
-if(password!=confirmation)/* Si password est différent de confirmation */{
-document.getElementById('error').innerHTML='Passwords don\'t match';
-document.getElementById('error').style.color ='red';
-event.preventDefault();
-}else{
+let input_author = document.getElementById('input_author');
+let input_topic = document.getElementById('input_topic');
+let content = document.getElementById('content');
+let submit = document.getElementById('submit');
+
+submit.onclick = function() {  
+
+if (input_author.value == '' || input_topic.value == ''|| content.value == '') {   
+    window.alert('Please fill every input.');
 }
-});
+};
